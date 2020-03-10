@@ -1,1 +1,18 @@
-<p>graphic works!</p>
+<div class="card">
+    <h2 class="card-header">
+        Análise Gráfica Dos Desenvolvedores </h2>
+    <div class="card-body">
+        <div>
+            <div style="display: block">
+              <canvas baseChart
+                      [datasets]="barChartData"
+                      [labels]="barChartLabels"
+                      [options]="barChartOptions"
+                      [legend]="barChartLegend"
+                      [chartType]="barChartType">
+              </canvas>
+            </div>
+          </div>
+    </div>
+  </div>
+  

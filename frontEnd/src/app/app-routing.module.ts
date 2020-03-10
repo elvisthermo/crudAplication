@@ -4,10 +4,20 @@ import { Routes, RouterModule } from '@angular/router';
 import {DeveloperAddComponent} from './developer-add/developer-add.component';
 import {DeveloperEditComponent} from './developer-edit/developer-edit.component';
 import {DeveloperGetComponent} from './developer-get/developer-get.component';
-import Developer from './Developer';
+import {HomeComponent} from './home/home.component';
+import {GraphicComponent} from './graphic/graphic.component';
+
 
 
 const routes: Routes = [
+  {
+    path:'home',
+    component:HomeComponent
+  },
+  {
+    path:'developer/graphic',
+    component:GraphicComponent
+  },
   {
     path:'developer',
     component:DeveloperGetComponent
@@ -17,13 +27,12 @@ const routes: Routes = [
     component:DeveloperAddComponent
   },
   {
-    path:'developer/create/list',
-    component:DeveloperGetComponent
-  },
-  
-  {
     path:'developer/edit/:id',
     component:DeveloperEditComponent
+  },
+  {
+    path:'developer/create/list',
+    component:DeveloperGetComponent
   }
 ];
 

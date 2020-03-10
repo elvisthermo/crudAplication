@@ -14,6 +14,7 @@ import {ReactiveFormsModule} from '@angular/forms';
 import {DeveloperService} from './developer.service';
 import { HomeComponent } from './home/home.component';
 import { GraphicComponent } from './graphic/graphic.component';
+import { ChartsModule } from 'ng2-charts';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { GraphicComponent } from './graphic/graphic.component';
     SlimLoadingBarModule.forRoot(),
     FontAwesomeModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    ChartsModule
   ],
   providers: [DeveloperService],
   bootstrap: [AppComponent]

@@ -22,8 +22,8 @@ export class DeveloperGetComponent implements OnInit {
 
   }
 
-  async trashDeveloprer(developer_id) {
-    await this.developerService.deleteDeveloper(developer_id);
+  trashDeveloprer(developer_id) {
+     this.developerService.deleteDeveloper(developer_id);
 
     this.developerService
     .getDevelopers()
