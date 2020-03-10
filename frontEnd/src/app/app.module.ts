@@ -13,6 +13,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import {ReactiveFormsModule} from '@angular/forms';
 import {DeveloperService} from './developer.service';
 import { HomeComponent } from './home/home.component';
+import { GraphicComponent } from './graphic/graphic.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { HomeComponent } from './home/home.component';
     DeveloperEditComponent,
     DeveloperGetComponent,
     HomeComponent,
+    GraphicComponent,
   ],
   imports: [
     BrowserModule,
