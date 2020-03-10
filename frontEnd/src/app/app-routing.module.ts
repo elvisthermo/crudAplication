@@ -1,38 +1,42 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import {DeveloperAddComponent} from './developer-add/developer-add.component';
-import {DeveloperEditComponent} from './developer-edit/developer-edit.component';
-import {DeveloperGetComponent} from './developer-get/developer-get.component';
-import {HomeComponent} from './home/home.component';
-import {GraphicComponent} from './graphic/graphic.component';
-
+import { DeveloperAddComponent } from './developer-add/developer-add.component';
+import { DeveloperEditComponent } from './developer-edit/developer-edit.component';
+import { DeveloperGetComponent } from './developer-get/developer-get.component';
+import { HomeComponent } from './home/home.component';
+import { GraphicComponent } from './graphic/graphic.component';
 
 
 const routes: Routes = [
   {
-    path:'home',
-    component:HomeComponent
+    path: '',
+    redirectTo: '/home',
+    pathMatch: 'full'
   },
   {
-    path:'developer/graphic',
-    component:GraphicComponent
+    path: 'home',
+    component: HomeComponent
   },
   {
-    path:'developer',
-    component:DeveloperGetComponent
+    path: 'developer/graphic',
+    component: GraphicComponent
   },
   {
-    path:'developer/create',
-    component:DeveloperAddComponent
+    path: 'developer',
+    component: DeveloperGetComponent
   },
   {
-    path:'developer/edit/:id',
-    component:DeveloperEditComponent
+    path: 'developer/create',
+    component: DeveloperAddComponent
   },
   {
-    path:'developer/create/list',
-    component:DeveloperGetComponent
+    path: 'developer/edit/:id',
+    component: DeveloperEditComponent
+  },
+  {
+    path: 'developer/create/list',
+    component: DeveloperGetComponent
   }
 ];
 

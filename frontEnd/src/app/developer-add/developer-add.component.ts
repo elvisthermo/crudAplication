@@ -10,6 +10,9 @@ import Swal from 'sweetalert2';
   styleUrls: ['./developer-add.component.css']
 })
 
+/**
+ * @description ts adição de adição de desenvolvedor
+ */
 export class DeveloperAddComponent implements OnInit {
   addDeveloperForm: FormGroup; 
   faPlus = faPlus;
@@ -37,8 +40,18 @@ export class DeveloperAddComponent implements OnInit {
    }
 
    /**
-    * @description metodo responsavel em adicionar desenvolvedor btn
-    * 
+    * @param name 
+    * @param email 
+    * @param telefone 
+    * @param linkenid 
+    * @param cidade 
+    * @param estado 
+    * @param turno 
+    * @param node 
+    * @param html 
+    * @param css 
+    * @param angular 
+    * @param banco_de_dados 
     */
    async addDeveloper(name, email, telefone, linkenid, cidade, estado, turno, node, html, css, angular, banco_de_dados) {
      await this.developerService.addDeveloper(name, email, telefone, linkenid, cidade, estado, turno, +node, +html, +css, +angular, +banco_de_dados)

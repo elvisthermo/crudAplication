@@ -2,7 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const app = express();
-const routes = require('./backEnd/routes/routes');
+const routes = require('./src/routes/routes');
 const mongoose = require('mongoose');
 
 mongoose.connect('mongodb+srv://thermo:root@cluster0-dlehv.mongodb.net/test?retryWrites=true&w=majority',{

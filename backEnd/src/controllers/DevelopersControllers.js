@@ -3,6 +3,9 @@ const axios = require('axios');
 const Developer = require('../models/Developer');
 //const parseStringAsArray = require('../utils/parseStringAsArray');
 
+/**
+ * @description controler de desenvolvedores
+ */
 //index, show, store, update, destroy
 module.exports = {
     async create(request, response) {
