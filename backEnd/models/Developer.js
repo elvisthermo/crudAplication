@@ -4,12 +4,16 @@ const DevSchema =  new mongoose.Schema({
     name:String,
     email:String,
     telefone:String,
-    linkedin:String,
+    linkenid:String,
     cidade:String,
     estado:String,
     turno:String,
-    habilidade:[String],
-    nivel:Number
+    node:Number,
+    angular:Number,
+    banco_de_dados:Number,
+    html:Number,
+    css:Number
+    
 });
 
 module.exports = mongoose.model('Developer',DevSchema);

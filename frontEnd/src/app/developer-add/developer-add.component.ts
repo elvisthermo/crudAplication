@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { faPlus } from '@fortawesome/free-solid-svg-icons';
 import {FormGroup,FormBuilder,Validators} from '@angular/forms'
 import {DeveloperService} from '../developer.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-developer-add',
@@ -13,7 +14,7 @@ export class DeveloperAddComponent implements OnInit {
   addDeveloperForm: FormGroup; 
   faPlus = faPlus;
 
-  constructor(private formBuilder: FormBuilder,private developerService:DeveloperService) {
+  constructor(private formBuilder: FormBuilder,private developerService:DeveloperService,private router: Router) {
     this.createForm();
    }
 
@@ -40,10 +41,13 @@ export class DeveloperAddComponent implements OnInit {
     * 
     */
    addDeveloper(name, email, telefone, linkenid, cidade, estado, turno, node, html, css, angular, banco_de_dados) {
-     this.developerService.addDeveloper(name, email, telefone, linkenid, cidade, estado, turno, +node, +html, +css, +angular, +banco_de_dados);
+     this.developerService.addDeveloper(name, email, telefone, linkenid, cidade, estado, turno, +node, +html, +css, +angular, +banco_de_dados)
+      
+     alert("Desenvolvedor cadastrado com sucesso!")
+      this.router.navigate(['developer/']);
+      
     }
-
-
+    
   ngOnInit(): void {
   }
 

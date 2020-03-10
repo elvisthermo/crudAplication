@@ -1,3 +1,4 @@
+
 const axios = require('axios');
 const Developer = require('../models/Developer');
 //const parseStringAsArray = require('../utils/parseStringAsArray');
@@ -5,7 +6,7 @@ const Developer = require('../models/Developer');
 //index, show, store, update, destroy
 module.exports = {
     async create(request, response) {
-        const { name, email, telefone, linkedin, cidade, estado, turno, habilidade, nivel } = request.body;
+        const { name, email, telefone, linkenid, cidade, estado, turno, node,angular,css,html,banco_de_dados} = request.body;
 
         let dev = await Developer.findOne({ email });
         if (!dev) {
@@ -15,12 +16,15 @@ module.exports = {
                 name,
                 email,
                 telefone,
-                linkedin,
+                linkenid,
                 cidade,
                 estado,
                 turno,
-                habilidade,
-                nivel,
+                node,
+                angular,
+                html,
+                css,
+                banco_de_dados
             });
 
             return response.json({ dev });
@@ -41,26 +45,27 @@ module.exports = {
 
 
     async listbyId(request, response) {
-        const email = request.params.id;
+        const id = request.params.id;
         let devs;
-        if (email) {
-            devs = await Developer.find({ email: email });
-            (!dev)
-            return response.json("error","desenvolvedor não encontrado");
-        } else {
-            devs = await Developer.find();
+        console.log('by id',id);
+    
+            devs = await Developer.find({ "_id": id },(err,res)=>{
+                if(err){
+                    response.json({"error":"usuário não encontrado"});
+                }
+                devs = res;
+            });
+          
         
-        }
-
         return response.json(devs);
     },
 
     async update(request, response) {
-        const { name, email, telefone, linkedin, cidade, estado, turno, habilidade, nivel } = request.body;
+        const { _id,name, email, telefone, linkedin, cidade, estado, turno, habilidade, nivel } = request.body;
 
-        console.log(email);
-        devs = await Developer.updateOne({"email":email},
+        devs = await Developer.updateOne({"_id":_id},
         {$set:{
+            "_id":_id,
             "name":name,
             "email":email,
             "telefone":telefone,
@@ -77,14 +82,16 @@ module.exports = {
 
     },
 
+
     async delete(request, response) {
-        const  _id = request.body;
-        
+        const _id = {_id:request.params.id};
+
         const delet = await Developer.deleteOne(_id, function (err) {
             if (err) return handleError(err);
-          });
 
-        return response.json({"message":"removido com sucesso"});
+          });
+          return response.json({"message":"deletado com sucesso!"});
+    
     }
 
 }

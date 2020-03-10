@@ -10,18 +10,17 @@ routes.post('/developers',DevController.create );
 
 routes.get('/developers',DevController.list);
 
+routes.get('/developers/:id',DevController.listbyId);
 
 /**
  * @description list desnevolvedores
  * @param {string} id - email de um desenvolvedor especifico para busca
  *  */
-routes.get('/developers/:id',DevController.listbyId);
 
-routes.put('/developers',DevController.update );
+routes.put('/developers/',DevController.update );
 
-routes.delete('/developers',DevController.delete );
+routes.delete('/developers/:id',DevController.delete );
 
-//routes.get('/search',SeachController.index );
 
 module.exports = routes;
 

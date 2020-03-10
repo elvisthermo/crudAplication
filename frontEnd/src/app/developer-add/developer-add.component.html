@@ -1,13 +1,14 @@
 <form [formGroup]="addDeveloperForm">
   <div class="card">
+    <h2 class="card-header">Cadastrar Devenvolvedor</h2>
     <div class="card-body">
-      <div class="col-md-6 col-md-offset-6" style="margin: 5%;">
-        
+      <div class="col-md-6 col-md-offset-6">
+
         <!--nome start  -->
         <div class="form-group">
           <label for="exampleFormControlInput1">Nome</label>
           <input type="text" class="form-control" formControlName="name" #name id="exampleFormControlInput1"
-            placeholder="Digite Seu Nome" >
+            placeholder="Digite Seu Nome">
         </div>
         <div *ngIf="addDeveloperForm.controls['name'].invalid
         && (addDeveloperForm.controls['name'].dirty
@@ -23,8 +24,7 @@
         <div class="form-group">
           <label for="exampleFormControlInput1">Email</label>
           <input type="email" class="form-control" formControlName="email" #email id="exampleFormControlInput2"
-            placeholder="Digite seu email" 
-            >
+            placeholder="Digite seu email">
         </div>
         <div *ngIf="addDeveloperForm.controls['email'].invalid
         && (addDeveloperForm.controls['email'].dirty
@@ -39,7 +39,7 @@
         <div class="form-group">
           <label for="exampleFormControlInput1">Telefone</label>
           <input type="tel" class="form-control" formControlName="telefone" #telefone id="exampleFormControlInput2"
-            placeholder="(xx)xxxx-xxxx" >
+            placeholder="(xx)xxxx-xxxx">
         </div>
         <div *ngIf="addDeveloperForm.controls['telefone'].invalid
         && (addDeveloperForm.controls['telefone'].dirty
@@ -55,7 +55,7 @@
         <div class="form-group">
           <label for="exampleFormControlInput1">LinkedIn</label>
           <input type="url" class="form-control" formControlName="linkenid" #linkenid id="exampleFormControlInput2"
-            placeholder="LinkedIn link" >
+            placeholder="LinkedIn link">
         </div>
         <div *ngIf="addDeveloperForm.controls['linkenid'].invalid
         && (addDeveloperForm.controls['linkenid'].dirty
@@ -69,7 +69,8 @@
         <!-- estado start-->
         <div class="form-group">
           <label for="exampleFormControlInput1">Estado</label>
-          <input type="text" class="form-control"  formControlName="estado" #estado id="exampleFormControlInput2" placeholder="Digite seu estado" >
+          <input type="text" class="form-control" formControlName="estado" #estado id="exampleFormControlInput2"
+            placeholder="Digite seu estado">
         </div>
         <div *ngIf="addDeveloperForm.controls['estado'].invalid
         && (addDeveloperForm.controls['estado'].dirty
@@ -83,7 +84,8 @@
         <!-- cidade start-->
         <div class="form-group">
           <label for="exampleFormControlInput1">Cidade</label>
-          <input type="text" class="form-control" formControlName="cidade" #cidade id="exampleFormControlInput2" placeholder="Digite sua cidade" >
+          <input type="text" class="form-control" formControlName="cidade" #cidade id="exampleFormControlInput2"
+            placeholder="Digite sua cidade">
         </div>
         <div *ngIf="addDeveloperForm.controls['cidade'].invalid
         && (addDeveloperForm.controls['cidade'].dirty
@@ -114,38 +116,33 @@
         <label>Node:</label>
         <div class="form-group">
           <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" formControlName="node"
-            [(ngModel)]="node.value"
-            #node value="1">
+            <input class="form-check-input" type="radio" formControlName="node" [(ngModel)]="node.value" #node
+              value="1">
             <label class="form-check-label">1</label>
           </div>
           <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" formControlName="node"
-            [(ngModel)]="node.value"
-            #node value="2">
+            <input class="form-check-input" type="radio" formControlName="node" [(ngModel)]="node.value" #node
+              value="2">
             <label class="form-check-label">2</label>
           </div>
           <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" formControlName="node"
-            [(ngModel)]="node.value"
-            #node value="3">
+            <input class="form-check-input" type="radio" formControlName="node" [(ngModel)]="node.value" #node
+              value="3">
             <label class="form-check-label">3 </label>
           </div>
           <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" formControlName="node"
-            [(ngModel)]="node.value"
-            #node value="4">
+            <input class="form-check-input" type="radio" formControlName="node" [(ngModel)]="node.value" #node
+              value="4">
             <label class="form-check-label">4 </label>
           </div>
           <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" formControlName="node"
-            [(ngModel)]="node.value"
-             #node value="5">
+            <input class="form-check-input" type="radio" formControlName="node" [(ngModel)]="node.value" #node
+              value="5">
             <label class="form-check-label">5 </label>
           </div>
         </div>
-        
-   
+
+
         <!-- habilidade 1 end-->
 
         <!-- habilidade 2 start-->
@@ -156,27 +153,23 @@
             <label class="form-check-label">1</label>
           </div>
           <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" formControlName="angular"
-              [(ngModel)]="angular.value"
-            #angular value="2">
+            <input class="form-check-input" type="radio" formControlName="angular" [(ngModel)]="angular.value" #angular
+              value="2">
             <label class="form-check-label">2</label>
           </div>
           <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" formControlName="angular"
-              [(ngModel)]="angular.value"
-            #angular value="3">
+            <input class="form-check-input" type="radio" formControlName="angular" [(ngModel)]="angular.value" #angular
+              value="3">
             <label class="form-check-label">3 </label>
           </div>
           <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" formControlName="angular"
-              [(ngModel)]="angular.value"
-            #angular value="4">
+            <input class="form-check-input" type="radio" formControlName="angular" [(ngModel)]="angular.value" #angular
+              value="4">
             <label class="form-check-label">4 </label>
           </div>
           <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" formControlName="angular"
-              [(ngModel)]="angular.value"
-            #angular value="5">
+            <input class="form-check-input" type="radio" formControlName="angular" [(ngModel)]="angular.value" #angular
+              value="5">
             <label class="form-check-label">5 </label>
           </div>
         </div>
@@ -186,33 +179,28 @@
         <label>HTML:</label>
         <div class="form-group">
           <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" formControlName="html"
-              [(ngModel)]="html.value"
-            #html value="1">
+            <input class="form-check-input" type="radio" formControlName="html" [(ngModel)]="html.value" #html
+              value="1">
             <label class="form-check-label">1</label>
           </div>
           <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" formControlName="html"
-              [(ngModel)]="html.value"
-            #html value="2">
+            <input class="form-check-input" type="radio" formControlName="html" [(ngModel)]="html.value" #html
+              value="2">
             <label class="form-check-label">2</label>
           </div>
           <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" formControlName="html"
-              [(ngModel)]="html.value"
-            #html value="3">
+            <input class="form-check-input" type="radio" formControlName="html" [(ngModel)]="html.value" #html
+              value="3">
             <label class="form-check-label">3 </label>
           </div>
           <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" formControlName="html"
-              [(ngModel)]="html.value"
-            #html value="4">
+            <input class="form-check-input" type="radio" formControlName="html" [(ngModel)]="html.value" #html
+              value="4">
             <label class="form-check-label">4 </label>
           </div>
           <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" formControlName="html"
-              [(ngModel)]="html.value"
-            #html value="5">
+            <input class="form-check-input" type="radio" formControlName="html" [(ngModel)]="html.value" #html
+              value="5">
             <label class="form-check-label">5 </label>
           </div>
         </div>
@@ -222,33 +210,23 @@
         <label>CSS:</label>
         <div class="form-group">
           <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" formControlName="css"
-              [(ngModel)]="css.value"
-            #css value="1">
+            <input class="form-check-input" type="radio" formControlName="css" [(ngModel)]="css.value" #css value="1">
             <label class="form-check-label">1</label>
           </div>
           <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" formControlName="css"
-              [(ngModel)]="css.value"
-            #css value="2">
+            <input class="form-check-input" type="radio" formControlName="css" [(ngModel)]="css.value" #css value="2">
             <label class="form-check-label">2</label>
           </div>
           <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" formControlName="css"
-              [(ngModel)]="css.value"
-            #css value="3">
+            <input class="form-check-input" type="radio" formControlName="css" [(ngModel)]="css.value" #css value="3">
             <label class="form-check-label">3 </label>
           </div>
           <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" formControlName="css"
-              [(ngModel)]="css.value"
-            #css value="4">
+            <input class="form-check-input" type="radio" formControlName="css" [(ngModel)]="css.value" #css value="4">
             <label class="form-check-label">4 </label>
           </div>
           <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" formControlName="css"
-              [(ngModel)]="css.value"
-            #css value="5">
+            <input class="form-check-input" type="radio" formControlName="css" [(ngModel)]="css.value" #css value="5">
             <label class="form-check-label">5 </label>
           </div>
         </div>
@@ -260,32 +238,27 @@
         <div class="form-group">
           <div class="form-check form-check-inline">
             <input class="form-check-input" type="radio" formControlName="banco_de_dados"
-              [(ngModel)]="banco_de_dados.value"
-            value="1"  #banco_de_dados >
+              [(ngModel)]="banco_de_dados.value" value="1" #banco_de_dados>
             <label class="form-check-label">1</label>
           </div>
           <div class="form-check form-check-inline">
             <input class="form-check-input" type="radio" formControlName="banco_de_dados"
-              [(ngModel)]="banco_de_dados.value"
-            value="2"  #banco_de_dados >
+              [(ngModel)]="banco_de_dados.value" value="2" #banco_de_dados>
             <label class="form-check-label">2</label>
           </div>
           <div class="form-check form-check-inline">
             <input class="form-check-input" type="radio" formControlName="banco_de_dados"
-              [(ngModel)]="banco_de_dados.value"
-            value="3"  #banco_de_dados >
+              [(ngModel)]="banco_de_dados.value" value="3" #banco_de_dados>
             <label class="form-check-label">3 </label>
           </div>
           <div class="form-check form-check-inline">
             <input class="form-check-input" type="radio" formControlName="banco_de_dados"
-              [(ngModel)]="banco_de_dados.value"
-            value="4"  #banco_de_dados >
+              [(ngModel)]="banco_de_dados.value" value="4" #banco_de_dados>
             <label class="form-check-label">4 </label>
           </div>
           <div class="form-check form-check-inline">
             <input class="form-check-input" type="radio" formControlName="banco_de_dados"
-              [(ngModel)]="banco_de_dados.value"
-            value="5"  #banco_de_dados >
+              [(ngModel)]="banco_de_dados.value" value="5" #banco_de_dados>
             <label class="form-check-label">5 </label>
           </div>
         </div>
@@ -293,8 +266,9 @@
       <!-- habilidade 5 end-->
 
       <!-- button submit start-->
-      <button (click)="addDeveloper(name.value, email.value, telefone.value, linkenid.value, cidade.value, estado.value, turno.value, node.value, html.value, css.value, angular.value, banco_de_dados.value)"
-       [disabled]="
+      <button
+        (click)="addDeveloper(name.value, email.value, telefone.value, linkenid.value, cidade.value, estado.value, turno.value, node.value, html.value, css.value, angular.value, banco_de_dados.value)"
+        [disabled]="
       addDeveloperForm.pristine ||
       addDeveloperForm.invalid" class="btn btn-primary btn-lg btn-block" style="margin-bottom: 100px;">
         Cadastrar
