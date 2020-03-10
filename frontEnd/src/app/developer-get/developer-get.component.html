@@ -1,49 +1,53 @@
-<table class="table-striped" style="width: 100%;">
-  <thead>
-    <tr>
-      <td align="center"><b>Nome:</b></td>
-      <td align="center"><b>Email</b></td>
-      <td align="center"><b>Turno</b></td>
-      <td align="center"><b>Cidade</b></td>
-      <td align="center"><b>Estado</b></td>
-      <td align="center"><b>Linkedin</b></td>
-      <td align="center"><b>Telefone</b></td>
-      <td align="center"><b>html</b></td>
-      <td align="center"><b>css</b></td>
-      <td align="center"><b>node</b></td>
-      <td align="center"><b>Angular</b></td>
-      <td align="center"><b>banco de dados</b></td>
-      <td align="center"><b>Editar</b></td>
-      <td align="center"><b>Excluir</b></td>
-    </tr>
-  </thead>
-  <tbody>
-    <tr *ngFor="let developer of developers">
-      <td align="center">{{developer.name}}</td>
-      <td align="center">{{developer.email}}</td>
-      <td align="center">{{developer.turno}}</td>
-      <td align="center">{{developer.cidade}}</td>
-      <td align="center">{{developer.estado}}</td>
-      <td align="center">{{developer.linkenid}}</td>
-      <td align="center">{{developer.telefone}}</td>
-      <td align="center">{{developer.html}}</td>
-      <td align="center">{{developer.css}}</td>
-      <td align="center">{{developer.node}}</td>
-      <td align="center">{{developer.angular}}</td>
-      <td align="center">{{developer.banco_de_dados}}</td>
-      <td align="center">
-              <a class="btn btn-info" 
-              [routerLink]="['/developer/edit',developer._id]" routerLinkActive="router-link-active">
-                <fa-icon  [icon]="faEdit"></fa-icon>
+<div class="card">
+  <h2 class="card-header">Gerênciar Desenvolvedores</h2>
+  <div class="card-body">
+    <table class="table-striped" style="width: 100%;">
+      <thead>
+        <tr>
+          <td align="center"><b>Nome:</b></td>
+          <td align="center"><b>Email</b></td>
+          <td align="center"><b>Turno</b></td>
+          <td align="center"><b>Cidade</b></td>
+          <td align="center"><b>Estado</b></td>
+          <td align="center"><b>Linkedin</b></td>
+          <td align="center"><b>Telefone</b></td>
+          <td align="center"><b>html</b></td>
+          <td align="center"><b>css</b></td>
+          <td align="center"><b>node</b></td>
+          <td align="center"><b>Angular</b></td>
+          <td align="center"><b>banco de dados</b></td>
+          <td align="center"><b>Editar</b></td>
+          <td align="center"><b>Excluir</b></td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let developer of developers">
+          <td align="center">{{developer.name}}</td>
+          <td align="center">{{developer.email}}</td>
+          <td align="center">{{developer.turno}}</td>
+          <td align="center">{{developer.cidade}}</td>
+          <td align="center">{{developer.estado}}</td>
+          <td align="center">{{developer.linkenid}}</td>
+          <td align="center">{{developer.telefone}}</td>
+          <td align="center">{{developer.html}}</td>
+          <td align="center">{{developer.css}}</td>
+          <td align="center">{{developer.node}}</td>
+          <td align="center">{{developer.angular}}</td>
+          <td align="center">{{developer.banco_de_dados}}</td>
+          <td align="center">
+            <a class="btn btn-info" [routerLink]="['/developer/edit',developer._id]"
+              routerLinkActive="router-link-active">
+              <fa-icon [icon]="faEdit"></fa-icon>
             </a>
-      </td>
-      <td align="center">
-        <button (click)="trashDeveloprer(developer._id);"
-         class="btn btn-danger">
-            <fa-icon  [icon]="faTrash"></fa-icon>
-        </button >
-      </td>
+          </td>
+          <td align="center">
+            <button (click)="trashDeveloprer(developer._id);" class="btn btn-danger">
+              <fa-icon [icon]="faTrash"></fa-icon>
+            </button>
+          </td>
 
-    </tr>
-  </tbody>
-</table>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

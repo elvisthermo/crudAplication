@@ -47,8 +47,6 @@ module.exports = {
     async listbyId(request, response) {
         const id = request.params.id;
         let devs;
-        console.log('by id',id);
-    
             devs = await Developer.find({ "_id": id },(err,res)=>{
                 if(err){
                     response.json({"error":"usuário não encontrado"});
@@ -61,7 +59,7 @@ module.exports = {
     },
 
     async update(request, response) {
-        const { _id,name, email, telefone, linkedin, cidade, estado, turno, habilidade, nivel } = request.body;
+        const { _id,name, email, telefone, linkenid, cidade, estado, turno, node, angular,html,css,banco_de_dados } = request.body;
 
         devs = await Developer.updateOne({"_id":_id},
         {$set:{
@@ -69,12 +67,16 @@ module.exports = {
             "name":name,
             "email":email,
             "telefone":telefone,
-            "linkedin":linkedin, 
+            "linkenid":linkenid, 
             "cidade":cidade, 
             "estado":estado, 
             "turno":turno, 
-            "habilidade":habilidade, 
-            "nivel":nivel
+            "node":node, 
+            "angular":angular,
+            "html":html,
+            "css":css,
+            "banco_de_dados":banco_de_dados
+
 
         }});
 
