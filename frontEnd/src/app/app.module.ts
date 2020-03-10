@@ -12,6 +12,7 @@ import {SlimLoadingBarModule} from 'ng2-slim-loading-bar';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import {ReactiveFormsModule} from '@angular/forms';
 import {DeveloperService} from './developer.service';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import {DeveloperService} from './developer.service';
     DeveloperAddComponent,
     DeveloperEditComponent,
     DeveloperGetComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,

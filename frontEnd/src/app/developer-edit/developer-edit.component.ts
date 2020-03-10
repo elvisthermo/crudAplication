@@ -5,6 +5,7 @@ import { ActivatedRoute } from '@angular/router';
 import { faPlus } from '@fortawesome/free-solid-svg-icons';
 import {FormGroup,FormBuilder,Validators} from '@angular/forms'
 import { Router } from '@angular/router';
+import Swal from 'sweetalert2'
 
 @Component({
   selector: 'app-developer-edit',
@@ -45,10 +46,9 @@ export class DeveloperEditComponent implements OnInit {
    * @description metodo responsavel em adicionar desenvolvedor btn
    * 
    */
-  addDeveloper(_id,name, email, telefone, linkenid, cidade, estado, turno, node, html, css, angular,banco_de_dados) {
-    this.developerService.updateDeveloper(_id,name, email, telefone, linkenid, cidade, estado, turno, +node, +html, +css, +angular, +banco_de_dados)
-     
-    alert("Desenvolvedor atualizado com sucesso!")
+  async addDeveloper(_id,name, email, telefone, linkenid, cidade, estado, turno, node, html, css, angular,banco_de_dados) {
+    await this.developerService.updateDeveloper(_id,name, email, telefone, linkenid, cidade, estado, turno, +node, +html, +css, +angular, +banco_de_dados)
+    await Swal.fire("Desenvolvedor atualizado com sucesso!");
      this.router.navigate(['developer/']);
      
    }

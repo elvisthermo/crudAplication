@@ -3,7 +3,7 @@ import { faPlus } from '@fortawesome/free-solid-svg-icons';
 import {FormGroup,FormBuilder,Validators} from '@angular/forms'
 import {DeveloperService} from '../developer.service';
 import { Router } from '@angular/router';
-
+import Swal from 'sweetalert2';
 @Component({
   selector: 'app-developer-add',
   templateUrl: './developer-add.component.html',
@@ -40,10 +40,11 @@ export class DeveloperAddComponent implements OnInit {
     * @description metodo responsavel em adicionar desenvolvedor btn
     * 
     */
-   addDeveloper(name, email, telefone, linkenid, cidade, estado, turno, node, html, css, angular, banco_de_dados) {
-     this.developerService.addDeveloper(name, email, telefone, linkenid, cidade, estado, turno, +node, +html, +css, +angular, +banco_de_dados)
+   async addDeveloper(name, email, telefone, linkenid, cidade, estado, turno, node, html, css, angular, banco_de_dados) {
+     await this.developerService.addDeveloper(name, email, telefone, linkenid, cidade, estado, turno, +node, +html, +css, +angular, +banco_de_dados)
       
-     alert("Desenvolvedor cadastrado com sucesso!")
+     await Swal.fire("Desenvolvedor cadastrado com sucesso!");
+     
       this.router.navigate(['developer/']);
       
     }
