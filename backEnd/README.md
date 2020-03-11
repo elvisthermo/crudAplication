@@ -8,11 +8,11 @@ Projeto aplicação crud ultizando as seguinter tecnologias
 Api rest node e mongodb.
 Api desenvolvida permite cadastro, edição,exclusão, e listagem de Desenvolvedores para para o banco de dados
 
-Arquivos:
-Modelo de esquema para o banco de dados :
-Modulo controlador de Desenvolvedores
-Rotas disponiveis
-Arquivo de configurações
+- Arquivos:
+- [Modelo de esquema para o banco de dados](https://github.com/elvisthermo/crudAplication/blob/master/backEnd/src/models/Developer.js)
+- [Modulo controlador de Desenvolvedores](https://github.com/elvisthermo/crudAplication/blob/master/backEnd/src/controllers/DevelopersControllers.js)
+- [Rotas disponiveis](https://github.com/elvisthermo/crudAplication/blob/master/backEnd/src/routes/routes.js)
+- [Arquivo de configurações](https://github.com/elvisthermo/crudAplication/blob/master/backEnd/index.js)
 
 
 
