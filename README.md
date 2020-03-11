@@ -9,7 +9,7 @@ Projeto aplicação crud ultizando as seguinter tecnologias
 A aplicação permite manipular os registros 
 - **Cadastro**
 - **Edição**
-- **Exclução**
+- **Exclusão**
 - **Análise dos registros por gráfico**. 
 
 A aplicação esta dividade nos diretórios:
