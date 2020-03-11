@@ -6,12 +6,17 @@ Projeto aplicação crud ultizando as seguinter tecnologias
 - Node
 - Banco de dados MongoDb
 
-A aplicação permite manipular os registros **cadastro**,**edição**,**exclução**,e **analise dos registros por gráfico**. 
+A aplicação permite manipular os registros 
+- **Cadastro**
+- **Edição**
+- **Exclução**
+- **Análise dos registros por gráfico**. 
 
 A aplicação esta dividade nos diretórios:
 
-- **FrontEnd** - Aplicação angular. [Documentação Projeto Front-End]().
-- **BackEnd** - Api rest node e mongodb. [Documentação Projeto Back-End]().
+- **FrontEnd** - Aplicação angular. [Projeto Front-End](https://github.com/elvisthermo/crudAplication/tree/master/backEnd).
+
+- **BackEnd** - Api rest node e mongodb. [Documentação Projeto Back-End](https://github.com/elvisthermo/crudAplication/tree/master/backEnd).
 
 ## instalação:
 Dentro dos diretorios backEnd e frontEnd use o seguinte comando:
