@@ -1,4 +1,4 @@
-# Cadastro de Desencolvedores back-end
+# Cadastro de Desenvolvedores back-end
 aplicação backEnd node.js
 
 Projeto aplicação crud ultizando as seguinter tecnologias

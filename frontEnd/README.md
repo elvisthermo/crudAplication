@@ -1,4 +1,4 @@
-# Cadastro de Desencolvedores front-end
+# Cadastro de Desenvolvedores front-end
 
 Aplicação Front-End com Angular9 e bootstrap4
 
