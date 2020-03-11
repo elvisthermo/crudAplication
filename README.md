@@ -16,7 +16,7 @@ A aplicação esta dividade nos diretórios:
 
 - **FrontEnd** - Aplicação angular. [Projeto Front-End](https://github.com/elvisthermo/crudAplication/tree/master/backEnd).
 
-- **BackEnd** - Api rest node e mongodb. [Documentação Projeto Back-End](https://github.com/elvisthermo/crudAplication/tree/master/backEnd).
+- **BackEnd** - Api rest node e mongodb. [Documentação Projeto Back-End](https://github.com/elvisthermo/crudAplication/tree/master/frontEnd).
 
 ## instalação:
 Dentro dos diretorios backEnd e frontEnd use o seguinte comando:
