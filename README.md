@@ -1,4 +1,5 @@
-# crudAplication
+# Gerenciamento de talentos da Afiliart 
+
 aplicação crud de front end angular  e back end node.js
 
 Projeto aplicação crud ultizando as seguinter tecnologias
