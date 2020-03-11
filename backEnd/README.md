@@ -15,9 +15,6 @@ Api desenvolvida permite cadastro, edição,exclusão, e listagem de Desenvolved
 - [Arquivo de configurações](https://github.com/elvisthermo/crudAplication/blob/master/backEnd/index.js)
 
 
-
-
-
 ## instalação:
 Dentro do diretorio backEnd use o seguinte comando:
 ```
