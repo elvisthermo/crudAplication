@@ -29,7 +29,7 @@
     "bootstrap": "^4.4.1",
     "chart.js": "^2.9.3",
     "font-awesome": "^4.7.0",
-    "jquery": "^1.9.1",
+    "jquery": "^3.5.0",
     "jsdoc-babel": "^0.5.0",
     "ng2-charts": "^2.3.0",
     "ng2-slim-loading-bar": "^4.0.0",
